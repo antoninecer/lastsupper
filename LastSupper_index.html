@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+<head>       
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistic Styles Gallery</title>
+    <style>  
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }    
+        h1 { 
+            text-align: center;
+            margin: 20px 0;
+        }    
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }    
+        .gallery-item {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }    
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }    
+        .gallery-item p {
+            text-align: center;
+            margin: 10px 0 0;
+        }
+
+        /* Fullscreen overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
+        }
+    </style> 
+</head>      
+<body>       
+    <h1>Artistic Styles Gallery</h1>
+		<h2>The Last Supper</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="cubism.png" alt="cubism Style">
+            <p>Cubism</p>
+        </div>
+        <div class="gallery-item">
+            <img src="ales.png" alt="ales Style">
+            <p>Ales</p>
+        </div>
+        <div class="gallery-item">
+            <img src="rembrandt.png" alt="rembrandt Style">
+            <p>Rembrandt</p>
+        </div>
+        <div class="gallery-item">
+            <img src="lada.png" alt="lada Style">
+            <p>Lada</p>
+        </div>
+        <div class="gallery-item">
+            <img src="ctvrtek.png" alt="ctvrtek Style">
+            <p>Ctvrtek</p>
+        </div>
+        <div class="gallery-item">
+            <img src="davinci.png" alt="davinci Style">
+            <p>Davinci</p>
+        </div>
+        <div class="gallery-item">
+            <img src="caravaggio.png" alt="caravaggio Style">
+            <p>Caravaggio</p>
+        </div>
+        <div class="gallery-item">
+            <img src="botticelli.png" alt="botticelli Style">
+            <p>Botticelli</p>
+        </div>
+        <div class="gallery-item">
+            <img src="manet.png" alt="manet Style">
+            <p>Manet</p>
+        </div>
+        <div class="gallery-item">
+            <img src="cezanne.png" alt="cezanne Style">
+            <p>Cezanne</p>
+        </div>
+        <div class="gallery-item">
+            <img src="cezanne2.png" alt="cezanne2 Style">
+            <p>Cezanne2</p>
+        </div>
+        <div class="gallery-item">
+            <img src="futuristic1.png" alt="futuristic1 Style">
+            <p>Futuristic1</p>
+        </div>
+        <div class="gallery-item">
+            <img src="photorealistic1.png" alt="photorealistic1 Style">
+            <p>Photorealistic1</p>
+        </div>
+        <div class="gallery-item">
+            <img src="photorealistic2.png" alt="photorealistic2 Style">
+            <p>Photorealistic2</p>
+        </div>
+        <div class="gallery-item">
+            <img src="photorealistic3.png" alt="photorealistic3 Style">
+            <p>Photorealistic3</p>
+        </div>
+        <div class="gallery-item">
+            <img src="nebulas.png" alt="nebulas Style">
+            <p>Nebulas</p>
+        </div>
+        <div class="gallery-item">
+            <img src="ales-botticelli.png" alt="ales-botticelli Style">
+            <p>Ales-Botticelli</p>
+        </div>
+        <div class="gallery-item">
+            <img src="futuristic3.png" alt="futuristic3 Style">
+            <p>Futuristic3</p>
+        </div>
+        <div class="gallery-item">
+            <img src="dali.png" alt="dali Style">
+            <p>Dali</p>
+        </div>
+        <div class="gallery-item">
+            <img src="cubism2.png" alt="cubism2 Style">
+            <p>Cubism2</p>
+        </div>
+        <div class="gallery-item">
+            <img src="cubism3.png" alt="cubism3 Style">
+            <p>Cubism3</p>
+        </div>
+        <div class="gallery-item">
+            <img src="futurism.png" alt="futurism Style">
+            <p>Futurism</p>
+        </div>
+        <div class="gallery-item">
+            <img src="surrealism.png" alt="surrealism Style">
+            <p>Surrealism</p>
+        </div>
+        <div class="gallery-item">
+            <img src="expressionism.png" alt="expressionism Style">
+            <p>Expressionism</p>
+        </div>
+        <div class="gallery-item">
+            <img src="constructivism.png" alt="constructivism Style">
+            <p>Constructivism</p>
+        </div>
+        <div class="gallery-item">
+            <img src="brutalism.png" alt="brutalism Style">
+            <p>Brutalism</p>
+        </div>
+        <div class="gallery-item">
+            <img src="abstract-expressionism.png" alt="abstract-expressionism Style">
+            <p>Abstract-Expressionism</p>
+        </div>
+        <div class="gallery-item">
+            <img src="LastSupperbyArtNouveau.png" alt="inspired by the Art Nouveau Style">
+            <p>Art Nouveau Style</p>
+        </div>
+        <div class="gallery-item">
+            <img src="LastSupperNouveau2.png" alt="inspired by the Art Nouveau Style">
+            <p>Art Nouveau Style</p>
+        </div>
+        <div class="gallery-item">
+            <img src="LastSupperbyArtNouveau1.png" alt="inspired by the Art Nouveau Style">
+            <p>Art Nouveau Style</p>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Fullscreen Image">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+
+        // Add click event to all gallery images
+        const images = document.querySelectorAll('.gallery-item img');
+        images.forEach(img => {
+            img.addEventListener('click', () => openLightbox(img.src));
+        });
+    </script>
+</body>      
+</html>
+
