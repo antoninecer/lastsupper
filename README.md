@@ -1,99 +1,167 @@
-# LastSupper
+# LastSupper – Artistic Styles Gallery
 
-Galerie variací na **Poslední večeři**, jako kdyby ji malovali různí autoři a styly.  
-Osobní playground pro experimentování s AI generováním obrázků, promptováním a jednoduchým webovým frontendem.
+A small, single-page gallery that explores **The Last Supper** in many different visual styles –  
+from classic painters like Rembrandt or Caravaggio to cubism, futurism, surrealism and even “Ales / Lada / Čtvrtek” Czech vibes.
 
-> „Co kdyby Poslední večeři nenamaloval Da Vinci, ale někdo úplně jiný? Nebo jiná doba, jiný styl, jiná nálada?“
+All images are AI-generated and displayed in a simple responsive grid with a fullscreen lightbox on click.
 
 ---
 
 ## Demo
 
-Online verze: **https://ae.cz9.cz/LastSupper/**
-
-*(Pokud zrovna nefunguje, jde o statický web, který lze spustit i lokálně podle návodu níže.)*
+Live version: **https://ae.cz9.cz/LastSupper/**
 
 ---
 
-## Hlavní myšlenka
+## Features
 
-- Vzít známý motiv (**The Last Supper / Poslední večeře**)  
-- Vygenerovat sadu variací v různých:
-  - uměleckých stylech,
-  - náladách,
-  - technikách (olej, komiks, sci-fi, cyberpunk, …)
-- Všechno zobrazit v jednoduché galerii, kde se dá:
-  - jen klikat a koukat,
-  - případně brát inspiraci pro další vlastní prompty.
-
-Žádná teologie, žádné poselství – čistě **vizuální hra se stylem** a AI modelem.
+- 🎨 Multiple artistic interpretations of *The Last Supper* (Cubism, Rembrandt, Lada, Futurism, Surrealism, …)
+- 🖼️ Responsive grid gallery layout
+- 🔍 Click any image to view it in fullscreen (simple lightbox)
+- 📄 Pure static site – one `index.html` file, no build tools or backend
 
 ---
 
-## Funkce
+## Tech stack
 
-- ✅ Jednoduchá galerie obrázků s náhledy  
-- ✅ Detaily obrázku (větší náhled; volitelně popisek / styl / použité prompty)  
-- ✅ Responzivní layout (použitelné na desktopu i mobilu)  
-- ✅ Statický web – žádný backend, dá se servírovat z libovolného hostingu / Nginx / Dockeru  
+- **HTML5** – single-page layout
+- **CSS** – responsive grid, basic styling, lightbox visuals
+- **Vanilla JavaScript** – lightbox logic (open/close on click)
 
-*(Pokud něco nebude sedět realitě, prostě to přepiš – struktura README je připravená.)*
-
----
-
-## Jak to funguje (koncept generování)
-
-Obrázky byly generovány pomocí **AI modelu pro generování obrázků** (typ Stable Diffusion / DALL·E / podobné), typicky stylem:
-
-- základní motiv: „The Last Supper, detailed scene“  
-- + styl: „in the style of \<autor / směr / technika\>“  
-- + doplňky: barevná paleta, typ světla, období, mood (dark, neon, baroque, low-poly…)
-
-Výsledkem je sada variací, které se liší:
-
-- světlem a atmosférou,
-- typem kresby/malby,
-- někdy kompozicí.
-
-> Projekt je myšlený jako **demonstrace možností AI stylizace**, ne jako realistická nebo historická rekonstrukce.
+No frameworks, no dependencies, just a lightweight static page.
 
 ---
 
-## Struktura projektu
-
-Příkladová struktura (přizpůsob podle skutečného repa):
+## Project structure
 
 ```text
-LastSupper/
-├─ index.html          # Hlavní stránka galerie
-├─ css/
-│  └─ styles.css       # Styl webu
-├─ js/
-│  └─ main.js          # Logika galerie (přepínání, modaly apod.)
-├─ images/
-│  ├─ thumbs/          # Náhledy
-│  └─ full/            # Plná rozlišení
+lastsupper/
+├─ index.html          # main page + inline CSS + JS
+├─ LastSupper_*.png   # all generated images (various styles)
 └─ README.md
-Jak spustit lokálně
-1) Nejjednodušší varianta – „otevři v prohlížeči“
-Pokud je projekt čistě statický (HTML + CSS + JS):
+All images are stored next to index.html and referenced directly in the HTML.
+
+Running locally
+Because it’s a static page, you have two easy options:
+
+1) Just open the file
+bash
+Copy code
+git clone https://github.com/antoninecer/lastsupper.git
+cd lastsupper
+# Open index.html in your browser (double-click or drag & drop)
+2) Serve via a tiny HTTP server (recommended)
+Python 3:
 
 bash
 Copy code
-git clone https://github.com/…/LastSupper.git
-cd LastSupper
-# Otevři index.html v prohlížeči (double-click / drag&drop)
-2) Malý lokální HTTP server (doporučeno)
-Python 3:
-bash
-Copy code
-git clone https://github.com/…/LastSupper.git
-cd LastSupper
+git clone https://github.com/antoninecer/lastsupper.git
+cd lastsupper
 python3 -m http.server 8000
-Pak v prohlížeči:
+Then open:
 
 text
 Copy code
 http://localhost:8000
+How the images were created
+The pictures were generated using an AI image model with prompts inspired by:
 
+famous painters (Da Vinci, Rembrandt, Caravaggio, Botticelli, Manet, Cézanne, Dalí, …),
 
+art movements (cubism, futurism, surrealism, abstract expressionism, constructivism, brutalism),
+
+and Czech artists / styles (Lada, Čtvrtek, Ales, Ales-Botticelli mix).
+
+The goal is not historical accuracy, but a playful exploration of how the same scene changes
+with style, color, composition and atmosphere.
+
+License
+Choose whatever fits you best (MIT/Apache-2.0 etc.).
+For now you can read this as: personal / educational project, AI-generated images, no guarantees.
+
+Author
+Antonín Ečer
+
+LinkedIn: https://www.linkedin.com/in/antoninecer/
+
+Homelab & infra / DevOps enthusiast, playing with AI and small visual experiments
+
+LastSupper – Galerie uměleckých stylů (CZ)
+Malá jednostránková galerie, která zkoumá Poslední večeři v různých vizuálních stylech –
+od klasických malířů jako Rembrandt nebo Caravaggio až po kubismus, futurismus, surrealismus
+a „ladovské/čtvrtkové“ české motivy.
+
+Všechny obrázky jsou generované pomocí AI a zobrazené v responzivní mřížce, po kliku se otevřou na celou obrazovku.
+
+Demo
+Online verze: https://ae.cz9.cz/LastSupper/
+
+Funkce
+🎨 Více uměleckých interpretací Poslední večeře (Cubism, Rembrandt, Lada, Futurism, Surrealism, …)
+
+🖼️ Responzivní gridová galerie
+
+🔍 Kliknutím na obrázek se otevře fullscreen náhled (lightbox)
+
+📄 Čistě statický web – jeden index.html, žádný backend ani build proces
+
+Použité technologie
+HTML5 – jednoduchý single-page layout
+
+CSS – responzivní grid, základní vzhled, lightbox
+
+Vanilla JavaScript – obsluha lightboxu (otevření/zavření)
+
+Žádné frameworky, žádné závislosti – jen lehká statická stránka.
+
+Struktura projektu
+text
+Copy code
+lastsupper/
+├─ index.html          # hlavní stránka + inline CSS a JS
+├─ LastSupper_*.png   # všechny vygenerované obrázky v různých stylech
+└─ README.md
+Obrázky leží vedle index.html a jsou přímo odkazované v HTML.
+
+Lokální spuštění
+1) Nejjednodušší – prostě otevřít soubor
+bash
+Copy code
+git clone https://github.com/antoninecer/lastsupper.git
+cd lastsupper
+# Otevři index.html v prohlížeči (dvojklik / drag & drop)
+2) Malý lokální HTTP server (doporučeno)
+Python 3:
+
+bash
+Copy code
+git clone https://github.com/antoninecer/lastsupper.git
+cd lastsupper
+python3 -m http.server 8000
+V prohlížeči pak:
+
+text
+Copy code
+http://localhost:8000
+Jak vznikaly obrázky
+Obrázky byly generované pomocí AI modelu pro obrázky s prompty inspirovanými:
+
+známými malíři (Da Vinci, Rembrandt, Caravaggio, Botticelli, Manet, Cézanne, Dalí, …),
+
+uměleckými směry (kubismus, futurismus, surrealismus, abstract expressionism, konstruktivismus, brutalismus),
+
+českými autory / náladami (Lada, Čtvrtek, Ales, kombinace Ales-Botticelli).
+
+Cílem není historická přesnost, ale hravý experiment: jak se změní stejná scéna,
+když se promění styl, barvy, kompozice a atmosféra.
+
+Licence
+Zvol si, co ti vyhovuje (MIT / Apache-2.0 atd.).
+Prozatím to ber jako: osobní / demonstrační projekt, AI obrázky, bez záruk.
+
+Autor
+Antonín Ečer
+
+LinkedIn: https://www.linkedin.com/in/antoninecer/
+
+Homelab & infra / DevOps nadšenec, co si bokem hraje s AI a vizuálními experimenty
